@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    @apply h-full select-none  font-mono antialiased text-white  overflow-hidden;
+  }
+  header{
+    -webkit-app-region:drag;
+
+  }
+  button{
+    -webkit-app-region: no-drag;
+  }
+}
