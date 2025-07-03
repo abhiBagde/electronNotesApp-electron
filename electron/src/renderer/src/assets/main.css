@@ -6,7 +6,7 @@
   html,
   body,
   #root {
-    @apply h-full select-none  font-mono antialiased text-white  overflow-hidden;
+    @apply h-full  bg-neutral-800 select-none   font-mono antialiased text-white  overflow-hidden;
   }
   header{
     -webkit-app-region:drag;

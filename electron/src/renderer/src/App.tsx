@@ -1,5 +1,5 @@
 import '@assets/main.css';
-import {Content,RootLayout,Sidebar, Dragtopbar,ActionButtonRow} from './components'
+import {Content,RootLayout,Sidebar, Dragtopbar,ActionButtonRow, NotePreviewList} from './components'
 const App=()=>{
  return (
  <>
@@ -7,9 +7,10 @@ const App=()=>{
    <RootLayout>
       
       <Sidebar className='p-4 bg-neutral-900 '> 
-         <ActionButtonRow className='flex justify-between'/>
+         <ActionButtonRow className='flex justify-between mt-1'/>
+         <NotePreviewList className = "mt-10 text-red-900 p-5"/>
       </Sidebar>
-      <Content className=' bg-neutral-800'>Content</Content>
+      <Content className=' '>Content</Content>
    </RootLayout>
    </>
 )
