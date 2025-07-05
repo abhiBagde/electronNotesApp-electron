@@ -7,10 +7,10 @@ const App=()=>{
    <RootLayout>
       
       <Sidebar className='p-4 bg-neutral-900 '> 
-         <ActionButtonRow className='flex justify-between mt-1'/>
-         <NotePreviewList className = "mt-10 text-red-900 p-5"/>
+         <ActionButtonRow className='flex justify-between mb-5 mt-1'/>
+         <NotePreviewList className = ""/>
       </Sidebar>
-      <Content className=' '>Content</Content>
+      <Content className=' '></Content>
    </RootLayout>
    </>
 )

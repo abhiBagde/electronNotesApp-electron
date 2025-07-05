@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: ['./src/renderer/**/*.{js,ts,tsx,jsx}'],
   theme: {
@@ -11,6 +13,6 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [ require('@tailwindcss/typpography')],
 }
 
