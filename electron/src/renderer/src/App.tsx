@@ -1,5 +1,5 @@
 import '@assets/main.css';
-import {Content,RootLayout,Sidebar, Dragtopbar,ActionButtonRow, NotePreviewList} from './components'
+import {Content,RootLayout,Sidebar, Dragtopbar,ActionButtonRow, NotePreviewList, MarkdownEditor} from './components'
 const App=()=>{
  return (
  <>
@@ -10,7 +10,9 @@ const App=()=>{
          <ActionButtonRow className='flex justify-between mb-5 mt-1'/>
          <NotePreviewList className = ""/>
       </Sidebar>
-      <Content className=' '></Content>
+      <Content className='border-l'>
+         <MarkdownEditor />
+      </Content>
    </RootLayout>
    </>
 )
