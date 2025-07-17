@@ -1,13 +1,12 @@
-import { appDirectoryName, fileEncoding } from '@shared/constants'
+import { appDirectoryName, fileEncoding } from '../../shared/constants'
 import { NoteInfo } from '@shared/models'
+import { GetNotes } from '@shared/types'
 import { promises as fs } from 'fs'
 import { ensureDir, readdir } from 'fs-extra'
 import { homedir } from 'os'
-import type { GetNotes} from '@shared/'
 export const getRootDir = () => {
   return `${homedir()}/${appDirectoryName}`
 }
-const dir = GetNote
 export const getNotes: GetNotes = async () => {
   const rootDir = getRootDir()
 
