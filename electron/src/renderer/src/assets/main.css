@@ -8,21 +8,20 @@
   #root {
     @apply h-full  bg-neutral-800 select-none   font-mono antialiased text-white  overflow-hidden;
   }
-  header{
-    -webkit-app-region:drag;
-
+  header {
+    -webkit-app-region: drag;
   }
-  button{
+  button {
     -webkit-app-region: no-drag;
   }
 
-  ::-webkit-scrollbar{
+  ::-webkit-scrollbar {
     @apply w-2;
   }
-  ::-webkit-scrollbar-thumb{
+  ::-webkit-scrollbar-thumb {
     @apply bg-[#555] rounded-md;
   }
-  ::-webkit-scrollbar-track{
-    @apply bg-transparent
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
   }
 }

@@ -10,18 +10,18 @@ function createWindow(): void {
     height: 700,
     show: false,
     autoHideMenuBar: true,
-    frame:false,
-    transparent:false,
+    frame: false,
+    transparent: false,
     ...(process.platform === 'linux' ? { icon } : {}),
-    center:true,
-    hasShadow:true,
-    title:"Notemark",
+    center: true,
+    hasShadow: true,
+    title: 'Notemark',
     visualEffectState: 'active',
     titleBarStyle: 'hidden',
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
       sandbox: true,
-      contextIsolation :true
+      contextIsolation: true
     }
   })
 

@@ -1,7 +1,6 @@
-import { ComponentProps } from 'react'
+import { cn, FormatDateFromMs } from '@renderer/utils'
 import { NoteInfo } from '@shared/models'
-import { twMerge } from 'tailwind-merge'
-import {cn, FormatDateFromMs} from '@renderer/utils'
+import { ComponentProps } from 'react'
 export type NotePreviewProps = NoteInfo & {
   isActive?: boolean
 } & ComponentProps<'div'>
@@ -24,7 +23,7 @@ export const NotePreview = ({
       {...props}
     >
       <h3 className="font-bold truncate p-0 leading-tight">{title}</h3>
-      <span className='text-xs font-light text-left'>{date}</span>
+      <span className="text-xs font-light text-left">{date}</span>
     </div>
   )
 }
