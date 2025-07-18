@@ -4,9 +4,11 @@ import { GetNotes } from '@shared/types'
 import { promises as fs } from 'fs'
 import { ensureDir, readdir } from 'fs-extra'
 import { homedir } from 'os'
+
 export const getRootDir = () => {
   return `${homedir()}/${appDirectoryName}`
 }
+
 export const getNotes: GetNotes = async () => {
   const rootDir = getRootDir()
 

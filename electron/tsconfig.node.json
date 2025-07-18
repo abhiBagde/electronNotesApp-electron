@@ -5,13 +5,11 @@
     "composite": true,
     "types": ["electron-vite/node"],
     "baseUrl":".",
-    "paths":{
-      "@/*":[
-        "src/main/*"
-      ],
-      "@shared/*": [
-        "src/shared/*"
-      ]
-    }
+    "paths": {
+  "@/*": ["src/main/*"],
+  "@shared": ["src/shared/index.ts"],     // ✅ for bare import
+  "@shared/*": ["src/shared/*"]           // ✅ for deep imports
+}
+
   }
 }
