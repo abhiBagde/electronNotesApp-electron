@@ -16,9 +16,7 @@ export const NotePreviewList = ({ onSelect, className, ...props }: NotePreviewLi
   if (isEmpty(notes)) {
     return (
       <ul className={twMerge('text-center pt-4', className)} {...props}>
-        <li>
           <span>No Notes yet</span>
-        </li>
       </ul>
     )
   }
@@ -29,7 +27,8 @@ export const NotePreviewList = ({ onSelect, className, ...props }: NotePreviewLi
         <NotePreview
           key={note.title + note.lastEditTime}
           isActive={selectedNotesIndex === index}
-          onClick={() => handleNotesSelect(index)}
+          onClick={handleNotesSelect(index)}
+
           {...note}
         />
       ))}
