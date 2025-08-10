@@ -1,9 +1,9 @@
-import { app, shell, BrowserWindow, ipcMain } from 'electron'
+import { electronApp, is, optimizer } from '@electron-toolkit/utils'
+import { CreateNote, DeleteNote, GetNotes, ReadNote, WriteNote } from '@shared/types'
+import { app, BrowserWindow, ipcMain, shell } from 'electron'
 import { join } from 'path'
-import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
-import { getNotes } from './lib'
-import { GetNotes } from '@shared/types'
+import { getNotes, readNote, writeNote , createNote, deleteNote } from './lib'
 
 function createWindow(): void {
   // Create the browser window.
@@ -61,9 +61,12 @@ app.whenReady().then(() => {
 
   // IPC test
   ipcMain.on('ping', () => console.log('pong'))
-  ipcMain.handle('getNotes', (_,...args: Parameters<GetNotes>) => getNotes(...args))
+  ipcMain.handle('getNotes', (_, ...args: Parameters<GetNotes>) => getNotes(...args))
   createWindow()
-
+  ipcMain.handle('readNote', (_, ...args: Parameters<ReadNote>) => readNote(...args))
+  ipcMain.handle('writeNote', (_, ...args: Parameters<WriteNote>) => writeNote(...args))
+  ipcMain.handle('createNote', (_, ...args: Parameters<CreateNote>) => createNote(...args))
+  ipcMain.handle('deleteNote', (_, ...args : Parameters<DeleteNote>) => deleteNote(...args))
   app.on('activate', function () {
     // On macOS it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
